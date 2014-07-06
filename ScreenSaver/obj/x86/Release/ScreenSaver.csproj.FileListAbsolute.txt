@@ -1,0 +1,8 @@
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\bin\Release\ScreenSaver.exe
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\bin\Release\ScreenSaver.pdb
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Release\ScreenSaver.SettingsForm.resources
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Release\ScreenSaver.Properties.Resources.resources
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Release\ScreenSaver.ScreenSaverForm.resources
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Release\ScreenSaver.csproj.GenerateResource.Cache
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Release\ScreenSaver.exe
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Release\ScreenSaver.pdb

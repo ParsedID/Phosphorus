@@ -1,0 +1,20 @@
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\bin\Debug\ScreenSaver.exe
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\bin\Debug\ScreenSaver.pdb
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.Properties.Resources.resources
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.ScreenSaverForm.resources
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.exe
+c:\users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.pdb
+C:\Users\fmccown\documents\visual studio 2010\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.SettingsForm.resources
+C:\Users\Admin\Desktop\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.exe
+C:\Users\Admin\Desktop\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.pdb
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\bin\Debug\ScreenSaver.exe
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\bin\Debug\ScreenSaver.pdb
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.SettingsForm.resources
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.Properties.Resources.resources
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.ScreenSaverForm.resources
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.csproj.GenerateResource.Cache
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.exe
+C:\Users\Admin\Dropbox\Projects\ScreenSaver\ScreenSaver\obj\x86\Debug\ScreenSaver.pdb
