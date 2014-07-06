@@ -12,6 +12,7 @@ Requirements:
 Requires Windows XP or higher and .NET Framework 4.0 or higher.
 
 Installation:
-You can test, configure and install it from any location using the context menu, for permanent installation move Phosphorus.scr to the Windows\System32 folder for 32-bit OS or Windows\SysWOW64 for 64-bit OS.
+You can test, configure and install it from any location using the context menu. 
+For permanent installation move Phosphorus.scr to the Windows\System32 folder for 32-bit OS or Windows\SysWOW64 for 64-bit OS.
 
 *Included is a sample text file filled with paradoxes.
