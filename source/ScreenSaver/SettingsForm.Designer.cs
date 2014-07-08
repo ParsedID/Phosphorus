@@ -45,12 +45,8 @@
             this.fontLabel = new System.Windows.Forms.Label();
             this.fontTextBox = new System.Windows.Forms.TextBox();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.colorButton = new System.Windows.Forms.Button();
             this.colorLabel = new System.Windows.Forms.Label();
-            this.colorTextBox = new System.Windows.Forms.TextBox();
-            this.canvasButton = new System.Windows.Forms.Button();
             this.canvasLabel = new System.Windows.Forms.Label();
-            this.canvasTextBox = new System.Windows.Forms.TextBox();
             this.trimCheckBox = new System.Windows.Forms.CheckBox();
             this.defaultsButton = new System.Windows.Forms.Button();
             this.removeSourceButton = new System.Windows.Forms.Button();
@@ -59,6 +55,10 @@
             this.sourcesListBox = new System.Windows.Forms.ListBox();
             this.pathButton = new System.Windows.Forms.Button();
             this.clearSourcesButton = new System.Windows.Forms.Button();
+            this.colorPreviewLabel = new System.Windows.Forms.Label();
+            this.canvasPreviewLabel = new System.Windows.Forms.Label();
+            this.colorComboBox = new System.Windows.Forms.ComboBox();
+            this.canvasComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // separatorTextBox
@@ -202,17 +202,6 @@
             this.fontTextBox.TabIndex = 7;
             this.fontTextBox.TabStop = false;
             // 
-            // colorButton
-            // 
-            this.colorButton.Location = new System.Drawing.Point(226, 159);
-            this.colorButton.Name = "colorButton";
-            this.colorButton.Size = new System.Drawing.Size(24, 22);
-            this.colorButton.TabIndex = 10;
-            this.colorButton.TabStop = false;
-            this.colorButton.Text = "...";
-            this.colorButton.UseVisualStyleBackColor = true;
-            this.colorButton.Click += new System.EventHandler(this.colorButton_Click);
-            // 
             // colorLabel
             // 
             this.colorLabel.AutoSize = true;
@@ -222,26 +211,6 @@
             this.colorLabel.TabIndex = 0;
             this.colorLabel.Text = "Color:";
             // 
-            // colorTextBox
-            // 
-            this.colorTextBox.Location = new System.Drawing.Point(77, 160);
-            this.colorTextBox.Name = "colorTextBox";
-            this.colorTextBox.ReadOnly = true;
-            this.colorTextBox.Size = new System.Drawing.Size(143, 20);
-            this.colorTextBox.TabIndex = 9;
-            this.colorTextBox.TabStop = false;
-            // 
-            // canvasButton
-            // 
-            this.canvasButton.Location = new System.Drawing.Point(226, 184);
-            this.canvasButton.Name = "canvasButton";
-            this.canvasButton.Size = new System.Drawing.Size(24, 22);
-            this.canvasButton.TabIndex = 12;
-            this.canvasButton.TabStop = false;
-            this.canvasButton.Text = "...";
-            this.canvasButton.UseVisualStyleBackColor = true;
-            this.canvasButton.Click += new System.EventHandler(this.canvasButton_Click);
-            // 
             // canvasLabel
             // 
             this.canvasLabel.AutoSize = true;
@@ -250,15 +219,6 @@
             this.canvasLabel.Size = new System.Drawing.Size(46, 13);
             this.canvasLabel.TabIndex = 0;
             this.canvasLabel.Text = "Canvas:";
-            // 
-            // canvasTextBox
-            // 
-            this.canvasTextBox.Location = new System.Drawing.Point(77, 185);
-            this.canvasTextBox.Name = "canvasTextBox";
-            this.canvasTextBox.ReadOnly = true;
-            this.canvasTextBox.Size = new System.Drawing.Size(143, 20);
-            this.canvasTextBox.TabIndex = 11;
-            this.canvasTextBox.TabStop = false;
             // 
             // trimCheckBox
             // 
@@ -342,11 +302,53 @@
             this.clearSourcesButton.UseVisualStyleBackColor = true;
             this.clearSourcesButton.Click += new System.EventHandler(this.clearSourcesButton_Click);
             // 
+            // colorPreviewLabel
+            // 
+            this.colorPreviewLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.colorPreviewLabel.Location = new System.Drawing.Point(227, 160);
+            this.colorPreviewLabel.Name = "colorPreviewLabel";
+            this.colorPreviewLabel.Size = new System.Drawing.Size(22, 20);
+            this.colorPreviewLabel.TabIndex = 10;
+            // 
+            // canvasPreviewLabel
+            // 
+            this.canvasPreviewLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.canvasPreviewLabel.Location = new System.Drawing.Point(227, 185);
+            this.canvasPreviewLabel.Name = "canvasPreviewLabel";
+            this.canvasPreviewLabel.Size = new System.Drawing.Size(22, 20);
+            this.canvasPreviewLabel.TabIndex = 12;
+            // 
+            // colorComboBox
+            // 
+            this.colorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colorComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.colorComboBox.FormattingEnabled = true;
+            this.colorComboBox.Location = new System.Drawing.Point(77, 160);
+            this.colorComboBox.Name = "colorComboBox";
+            this.colorComboBox.Size = new System.Drawing.Size(143, 20);
+            this.colorComboBox.TabIndex = 9;
+            this.colorComboBox.SelectedIndexChanged += new System.EventHandler(this.colorComboBox_SelectedIndexChanged);
+            // 
+            // canvasComboBox
+            // 
+            this.canvasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.canvasComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.canvasComboBox.FormattingEnabled = true;
+            this.canvasComboBox.Location = new System.Drawing.Point(77, 185);
+            this.canvasComboBox.Name = "canvasComboBox";
+            this.canvasComboBox.Size = new System.Drawing.Size(143, 20);
+            this.canvasComboBox.TabIndex = 11;
+            this.canvasComboBox.SelectedIndexChanged += new System.EventHandler(this.canvasComboBox_SelectedIndexChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(260, 315);
+            this.Controls.Add(this.canvasComboBox);
+            this.Controls.Add(this.colorComboBox);
+            this.Controls.Add(this.canvasPreviewLabel);
+            this.Controls.Add(this.colorPreviewLabel);
             this.Controls.Add(this.clearSourcesButton);
             this.Controls.Add(this.pathButton);
             this.Controls.Add(this.sourcesListBox);
@@ -355,12 +357,8 @@
             this.Controls.Add(this.removeSourceButton);
             this.Controls.Add(this.defaultsButton);
             this.Controls.Add(this.trimCheckBox);
-            this.Controls.Add(this.canvasButton);
             this.Controls.Add(this.canvasLabel);
-            this.Controls.Add(this.canvasTextBox);
-            this.Controls.Add(this.colorButton);
             this.Controls.Add(this.colorLabel);
-            this.Controls.Add(this.colorTextBox);
             this.Controls.Add(this.fontButton);
             this.Controls.Add(this.fontLabel);
             this.Controls.Add(this.fontTextBox);
@@ -406,12 +404,8 @@
         private System.Windows.Forms.Label fontLabel;
         private System.Windows.Forms.TextBox fontTextBox;
         private System.Windows.Forms.ColorDialog colorDialog;
-        private System.Windows.Forms.Button colorButton;
         private System.Windows.Forms.Label colorLabel;
-        private System.Windows.Forms.TextBox colorTextBox;
-        private System.Windows.Forms.Button canvasButton;
         private System.Windows.Forms.Label canvasLabel;
-        private System.Windows.Forms.TextBox canvasTextBox;
         private System.Windows.Forms.CheckBox trimCheckBox;
         private System.Windows.Forms.Button defaultsButton;
         private System.Windows.Forms.Button removeSourceButton;
@@ -420,5 +414,9 @@
         private System.Windows.Forms.ListBox sourcesListBox;
         private System.Windows.Forms.Button pathButton;
         private System.Windows.Forms.Button clearSourcesButton;
+        private System.Windows.Forms.Label colorPreviewLabel;
+        private System.Windows.Forms.Label canvasPreviewLabel;
+        private System.Windows.Forms.ComboBox colorComboBox;
+        private System.Windows.Forms.ComboBox canvasComboBox;
     }
 }

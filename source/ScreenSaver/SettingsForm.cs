@@ -18,6 +18,13 @@ namespace ScreenSaver
         public SettingsForm()
         {
             InitializeComponent();
+
+            foreach (var colorValue in Enum.GetValues(typeof(KnownColor)))
+            {
+                colorComboBox.Items.Add(colorValue.ToString());
+                canvasComboBox.Items.Add(colorValue.ToString());
+            }
+
             LoadSettings();
         }
 
@@ -35,8 +42,8 @@ namespace ScreenSaver
                     minSpeedTextBox.Text = (string)registryKey.GetValue("minSpeed");
                     maxSpeedTextBox.Text = (string)registryKey.GetValue("maxSpeed");
                     fontTextBox.Text = (string)registryKey.GetValue("font");
-                    colorTextBox.Text = (string)registryKey.GetValue("color");
-                    canvasTextBox.Text = (string)registryKey.GetValue("canvas");
+                    colorComboBox.SelectedItem = (string)registryKey.GetValue("color");
+                    canvasComboBox.SelectedItem = (string)registryKey.GetValue("canvas");
                     trimCheckBox.Checked = Convert.ToBoolean((string)registryKey.GetValue("trim"));
                     dividerTextBox.Text = (string)registryKey.GetValue("divider");
                     caretCheckBox.Checked = Convert.ToBoolean((string)registryKey.GetValue("caret"));
@@ -82,8 +89,8 @@ namespace ScreenSaver
             registryKey.SetValue("minSpeed", minSpeedTextBox.Text);
             registryKey.SetValue("maxSpeed", maxSpeedTextBox.Text);
             registryKey.SetValue("font", fontTextBox.Text);
-            registryKey.SetValue("color", colorTextBox.Text);
-            registryKey.SetValue("canvas", canvasTextBox.Text);
+            registryKey.SetValue("color", colorComboBox.Text);
+            registryKey.SetValue("canvas", canvasComboBox.Text);
             registryKey.SetValue("trim", trimCheckBox.Checked.ToString());
             registryKey.SetValue("divider", dividerTextBox.Text);
             registryKey.SetValue("caret", caretCheckBox.Checked.ToString());
@@ -156,22 +163,6 @@ namespace ScreenSaver
             }
         }
 
-        private void colorButton_Click(object sender, EventArgs e)
-        {
-            if (colorDialog.ShowDialog() == DialogResult.OK)
-            {
-                colorTextBox.Text = colorDialog.Color.Name;
-            }
-        }
-
-        private void canvasButton_Click(object sender, EventArgs e)
-        {
-            if (colorDialog.ShowDialog() == DialogResult.OK)
-            {
-                canvasTextBox.Text = colorDialog.Color.Name;
-            }
-        }
-
         private void SpeedTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -187,14 +178,24 @@ namespace ScreenSaver
                 minSpeedTextBox.Text = "5";
                 maxSpeedTextBox.Text = "100";
                 fontTextBox.Text = "Consolas; 24pt";
-                colorTextBox.Text = "Lime";
-                canvasTextBox.Text = "Black";
+                colorComboBox.SelectedItem = "Lime";
+                canvasComboBox.SelectedItem = "Black";
                 trimCheckBox.Checked = true;
                 dividerTextBox.Clear();
                 caretCheckBox.Checked = false;
 
                 MessageBox.Show("Default values restored!", "Defaults", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void colorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            colorPreviewLabel.BackColor = Color.FromName(colorComboBox.Text);
+        }
+
+        private void canvasComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            canvasPreviewLabel.BackColor = Color.FromName(canvasComboBox.Text);
         }
     }
 }
