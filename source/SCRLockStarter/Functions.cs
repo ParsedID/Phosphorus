@@ -8,26 +8,18 @@ namespace SCRLockStarter
 {
     class Functions
     {
-        [DllImport("User32.dll")]
-        public static extern int SendMessage
-            (IntPtr hWnd,
-            uint Msg,
-            uint wParam,
-            uint lParam);
-        public const uint WM_SYSCOMMAND = 0x112;
-        public const uint SC_SCREENSAVE = 0xF140;
-        public enum SpecialHandles
-        {
-            HWND_DESKTOP = 0x0,
-            HWND_BROADCAST = 0xFFFF
-        }
+        [DllImport("user32.dll", EntryPoint = "GetDesktopWindow")]
+        private static extern IntPtr GetDesktopWindow();
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
+
+        private const int SC_SCREENSAVE = 0xF140;
+        private const int WM_SYSCOMMAND = 0x0112;
+
         public static void TurnOnScreenSaver()
         {
-            SendMessage(
-                new IntPtr((int)SpecialHandles.HWND_BROADCAST),
-                WM_SYSCOMMAND,
-                SC_SCREENSAVE,
-                0);
+            SendMessage(GetDesktopWindow(), WM_SYSCOMMAND, SC_SCREENSAVE, 0);
         }
     }
 }

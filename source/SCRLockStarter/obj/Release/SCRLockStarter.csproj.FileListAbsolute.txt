@@ -5,3 +5,10 @@ c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockSt
 c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.csproj.GenerateResource.Cache
 c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.exe
 c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.pdb
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.exe
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.pdb
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\bin\Release\SCRLockStarter.exe
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\bin\Release\SCRLockStarter.pdb
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.MainForm.resources
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.Properties.Resources.resources
+C:\Users\Admin\Dropbox\Projects\SCRLockStarter\SCRLockStarter\obj\Release\SCRLockStarter.csproj.GenerateResource.Cache
