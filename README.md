@@ -15,3 +15,5 @@ Installation:
 You can test, configure and install it from any location using the context menu. For permanent installation move Phosphorus.scr to the Windows\System32 folder for 32-bit OS or Windows\SysWOW64 for 64-bit OS.
 
 *Included is a sample text file filled with paradoxes.
+**Included is also a little application that sits in your notification tray and upon detecting session lock (when you lock your computer) launches your screensaver so you dont have to wait for the timeout.
+Just Copy SCRLockStarter.exe into your startup folder (shell:startup) to make it launch with Windows.

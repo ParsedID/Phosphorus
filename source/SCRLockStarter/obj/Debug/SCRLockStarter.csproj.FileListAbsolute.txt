@@ -1,0 +1,7 @@
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\bin\Debug\SCRLockStarter.exe
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\bin\Debug\SCRLockStarter.pdb
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Debug\SCRLockStarter.MainForm.resources
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Debug\SCRLockStarter.Properties.Resources.resources
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Debug\SCRLockStarter.csproj.GenerateResource.Cache
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Debug\SCRLockStarter.exe
+c:\users\jeusn_al\documents\visual studio 2013\Projects\SCRLockStarter\SCRLockStarter\obj\Debug\SCRLockStarter.pdb
