@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SCRLockStarter")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ScreenLock")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SCRLockStarter")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("OpenSource")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

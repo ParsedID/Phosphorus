@@ -29,6 +29,13 @@ namespace SCRLockStarter
             FadeOutTimer.Tick += FadeOutTimer_Tick;
 
             SystemEvents.SessionSwitch += new SessionSwitchEventHandler(SystemEvents_SessionSwitch);
+            SystemEvents.SessionEnding += SystemEvents_SessionEnding;
+        }
+
+        void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
+        {
+            canExit = true;
+            this.Close();
         }
 
         bool canExit = false;
@@ -55,6 +62,7 @@ namespace SCRLockStarter
             else
             {
                 SystemEvents.SessionSwitch -= new SessionSwitchEventHandler(SystemEvents_SessionSwitch);
+                SystemEvents.SessionEnding += SystemEvents_SessionEnding;
             }
         }
 

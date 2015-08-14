@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.nIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.ctMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.appIcon = new System.Windows.Forms.PictureBox();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appIcon = new System.Windows.Forms.PictureBox();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -58,16 +58,6 @@
             this.ctMenu.Size = new System.Drawing.Size(108, 48);
             this.ctMenu.Text = "SCRLockStarter";
             // 
-            // appIcon
-            // 
-            this.appIcon.Image = global::SCRLockStarter.Properties.Resources.system_lock_screen_icon;
-            this.appIcon.Location = new System.Drawing.Point(12, 11);
-            this.appIcon.Name = "appIcon";
-            this.appIcon.Size = new System.Drawing.Size(104, 98);
-            this.appIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.appIcon.TabIndex = 2;
-            this.appIcon.TabStop = false;
-            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Image = global::SCRLockStarter.Properties.Resources.information;
@@ -84,15 +74,25 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // appIcon
+            // 
+            this.appIcon.Image = global::SCRLockStarter.Properties.Resources.system_lock_screen_icon;
+            this.appIcon.Location = new System.Drawing.Point(12, 11);
+            this.appIcon.Name = "appIcon";
+            this.appIcon.Size = new System.Drawing.Size(104, 98);
+            this.appIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.appIcon.TabIndex = 2;
+            this.appIcon.TabStop = false;
+            // 
             // aboutLabel
             // 
             this.aboutLabel.AutoSize = true;
             this.aboutLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.aboutLabel.Location = new System.Drawing.Point(122, 15);
             this.aboutLabel.Name = "aboutLabel";
-            this.aboutLabel.Size = new System.Drawing.Size(113, 34);
+            this.aboutLabel.Size = new System.Drawing.Size(120, 34);
             this.aboutLabel.TabIndex = 3;
-            this.aboutLabel.Text = "SCRLockStarter\r\nCopyright © 2014";
+            this.aboutLabel.Text = "SCRLockStarter\r\nGNU Public License";
             // 
             // linkLabel1
             // 

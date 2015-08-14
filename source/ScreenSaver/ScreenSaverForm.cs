@@ -294,8 +294,9 @@ namespace ScreenSaver
 
         private void ScreenSaverForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (backgroundWorker.IsBusy)
-                backgroundWorker.CancelAsync();
+            // Should implement async cancellation methods...
+            /*if (backgroundWorker.IsBusy)
+                backgroundWorker.CancelAsync();*/
             if (writeTimer.Enabled)
                 writeTimer.Stop();
         }

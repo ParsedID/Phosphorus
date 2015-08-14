@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ScreenSaver
@@ -16,8 +17,15 @@ namespace ScreenSaver
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            AppDomain currentDomain = AppDomain.CurrentDomain;
-            currentDomain.UnhandledException += new UnhandledExceptionEventHandler(unhandledExceptionsHandler);
+            // Add the event handler for handling UI thread exceptions to the event.
+            Application.ThreadException += new ThreadExceptionEventHandler(UIThreadException);
+
+            // Set the unhandled exception mode to force all Windows Forms errors to go through 
+            // our handler.
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+
+            // Add the event handler for handling non-UI thread exceptions to the event. 
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
             if (args.Length > 0)
             {
@@ -84,7 +92,18 @@ namespace ScreenSaver
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        static void unhandledExceptionsHandler(object sender, UnhandledExceptionEventArgs args)
+        private static void UIThreadException(object sender, ThreadExceptionEventArgs t)
+        {
+            //Application.Exit();
+            System.Environment.Exit(0);
+        }
+
+        /// <summary>
+        /// Handle any unexpected exceptions silently.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             System.Environment.Exit(0);
         }
