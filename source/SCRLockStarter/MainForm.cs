@@ -28,44 +28,41 @@ namespace SCRLockStarter
             FadeInTimer.Tick += FadeInTimer_Tick;
             FadeOutTimer.Tick += FadeOutTimer_Tick;
 
-            SystemEvents.SessionSwitch += new SessionSwitchEventHandler(SystemEvents_SessionSwitch);
-            SystemEvents.SessionEnding += new SessionEndingEventHandler(SystemEvents_SessionEnding);
-        }
-
-        void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
-        {
-            canExit = true;
-            this.Close();
-            /*SystemEvents.SessionSwitch -= SystemEvents_SessionSwitch;
-            SystemEvents.SessionEnding -= SystemEvents_SessionEnding;
-            System.Environment.Exit(0);*/
+            SystemEvents.SessionSwitch += SystemEvents_SessionSwitch;
         }
 
         bool canExit = false;
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+
         {
-            if (!canExit)
+            if (e.CloseReason != CloseReason.WindowsShutDown)
             {
-                if (FadeOutTimer.Enabled)
-                    FadeOutTimer.Stop();
-                FadeOutTimer.Start();
+                if (!canExit)
+                {
+                    if (FadeOutTimer.Enabled)
+                        FadeOutTimer.Stop();
+                    FadeOutTimer.Start();
 
-                e.Cancel = true;
-                return;
-            }
-            else if (this.Opacity > 0)
-            {
-                if (FadeOutTimer.Enabled)
-                    FadeOutTimer.Stop();
-                FadeOutTimer.Start();
+                    e.Cancel = true;
+                    return;
+                }
+                else if (this.Opacity > 0)
+                {
+                    if (FadeOutTimer.Enabled)
+                        FadeOutTimer.Stop();
+                    FadeOutTimer.Start();
 
-                e.Cancel = true;
-                return;
+                    e.Cancel = true;
+                    return;
+                }
+                else
+                {
+                    SystemEvents.SessionSwitch -= SystemEvents_SessionSwitch;
+                }
             }
             else
             {
                 SystemEvents.SessionSwitch -= SystemEvents_SessionSwitch;
-                SystemEvents.SessionEnding -= SystemEvents_SessionEnding;
             }
         }
 
